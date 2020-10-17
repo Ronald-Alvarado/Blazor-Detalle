@@ -12,55 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -560708390,
+        "HashCode": 1613664590,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "Name": "Blazor_Detalle.App",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "RPrestamo"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "PrestamoId",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "PrestamoId"
-            }
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo"
+          "Common.TypeName": "Blazor_Detalle.App"
         }
       },
       {
-        "HashCode": -1731146591,
+        "HashCode": -1093419507,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "Name": "Blazor_Detalle.App",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Blazor_Detalle.Pages.Registros.RPrestamo"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "PrestamoId",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "PrestamoId"
-            }
+            "TagName": "Blazor_Detalle.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo",
+          "Common.TypeName": "Blazor_Detalle.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -197,35 +177,88 @@
         }
       },
       {
-        "HashCode": 1613664590,
+        "HashCode": -1072634335,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.App",
+        "Name": "Blazor_Detalle.Pages.Registros.RPersonas",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "RPersonas"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "PersonaId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PersonaId"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.App"
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPersonas"
         }
       },
       {
-        "HashCode": -1093419507,
+        "HashCode": -57094814,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.App",
+        "Name": "Blazor_Detalle.Pages.Registros.RPersonas",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Blazor_Detalle.App"
+            "TagName": "Blazor_Detalle.Pages.Registros.RPersonas"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "PersonaId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PersonaId"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.App",
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPersonas",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1591222501,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RPrestamo"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo"
+        }
+      },
+      {
+        "HashCode": 261532439,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.Pages.Registros.RPrestamo"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

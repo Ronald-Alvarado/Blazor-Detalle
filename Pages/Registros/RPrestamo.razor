@@ -1,4 +1,6 @@
 @page "/Prestamo"
+@using BLL
+@using Models
 
 @inject IToastService Toast
 
@@ -28,7 +30,8 @@
 
 				<div class="form-group">
 					<label>PersonaId</label>
-					<select @bind="PersonaSeleccionada" class="form-control" @onfocusin="ObtenerBalance">
+
+                    <select @bind="prestamo.PersonaId" class="form-control" @onfocusin="ObtenerBalance">
                         <option value="0" disabled selected>Seleccionar persona</option>
                         
                         @foreach (var item in ListaPersonas)
@@ -36,6 +39,8 @@
                             <option value="@item.PersonaId">@item.PersonaId</option>
                         }
                     </select>
+
+
                     <ValidationMessage For="@(() => prestamo.PersonaId)"/>
 				</div>
 
@@ -53,7 +58,7 @@
 
 				<div class="form-group">
 					<label>Balance</label>
-					<InputNumber readonly="true" @bind-Value="prestamo.Balance" class="form-control"/>
+					<input type="text" readonly="true" @bind="prestamo.Balance" class="form-control"/>
 				</div>           	
 				
                 	                    <!--Buttons--->
@@ -76,29 +81,23 @@
 
 @code{
     private Prestamo prestamo = new Prestamo();
-
-    public int PersonaSeleccionada { get; set; }
-
     List<Persona> ListaPersonas = new List<Persona>();
-
-    [Parameter] public int PrestamoId { get; set; }
-
     protected override void OnInitialized()
     {
         Nuevo();
     }
 
     public float Balance { get; set;}
+    
     private void ObtenerBalance()
     {
-        Persona persona = PersonaBLL.Buscar(PersonaSeleccionada);
+        Persona persona = PersonaBLL.Buscar(prestamo.PersonaId);
 
         if (persona != null)
         {
             prestamo.PersonaId = persona.PersonaId;
             prestamo.Balance = persona.Balance;
         }
-
         
         Balance = prestamo.Balance;
     }
@@ -115,7 +114,10 @@
 
     private void Guardar()
     {
+        Persona persona = PersonaBLL.Buscar(prestamo.PersonaId);
         bool guardado;
+
+        PrestamoBLL.AnadirBalance(prestamo, persona);
 
         guardado = PrestamoBLL.Guardar(prestamo);
 

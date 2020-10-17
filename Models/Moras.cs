@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Blazor_Detalle{
+namespace Blazor_Detalle.Models{
 
     public class Moras{
         [Key] public int MoraId { get; set; }

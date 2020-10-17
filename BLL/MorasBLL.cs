@@ -3,8 +3,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Blazor_Detalle.Models;
+using Blazor_Detalle.DAL;
 
-namespace Blazor_Detalle
+namespace Blazor_Detalle.BLL
 {
     public class MorasBLL
     {

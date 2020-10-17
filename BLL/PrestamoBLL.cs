@@ -3,19 +3,34 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Blazor_Detalle.Models;
+using Blazor_Detalle.DAL;
 
-namespace Blazor_Detalle
+namespace Blazor_Detalle.BLL
 {
     public class PrestamoBLL
     {
         public static bool Guardar(Prestamo prestamo)
         {
-            Persona persona = new Persona();
             Contexto contexto = new Contexto();
+
+            if(!Existe(prestamo.PrestamoId))
+                return Insertar(prestamo);
+            else
+                return Modificar(prestamo);
+            
+        }
+
+        public static bool AnadirBalance(Prestamo prestamo, Persona persona)
+        {            
+            Contexto contexto = new Contexto();
+            bool insertado = false;
 
             try
             {
-                persona = contexto.Persona.Find(prestamo.PersonaId);
+                persona.Balance = prestamo.Balance;
+                contexto.Entry(persona).State = EntityState.Modified;               
+                insertado = (contexto.SaveChanges() > 0);
             }
             catch(Exception)
             {
@@ -25,15 +40,10 @@ namespace Blazor_Detalle
             {
                 contexto.Dispose();
             }
-
-            if(!Existe(prestamo.PrestamoId))
-                return Insertar(prestamo,persona);
-            else
-                return Modificar(prestamo,persona);
-            
+            return insertado;
         }
 
-        private static bool Existe(int id)
+        public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
@@ -53,16 +63,14 @@ namespace Blazor_Detalle
             return encontrado;
         }
 
-        private static bool Insertar(Prestamo prestamo,Persona persona)
+        public static bool Insertar(Prestamo prestamo)
         {
             Contexto contexto = new Contexto();
             bool insertado = false;
 
             try
             {
-                contexto.Prestamo.Add(prestamo);
-                persona.Balance = prestamo.Balance;
-                contexto.Persona.Add(persona);
+                contexto.Prestamo.Add(prestamo);                
                 insertado = (contexto.SaveChanges() > 0);
             }
             catch(Exception)
@@ -76,7 +84,7 @@ namespace Blazor_Detalle
             return insertado;
         }
 
-        private static bool Modificar(Prestamo prestamo, Persona persona)
+        public static bool Modificar(Prestamo prestamo)
         {
             Contexto contexto = new Contexto();
             bool modificado = false;
@@ -84,8 +92,6 @@ namespace Blazor_Detalle
             try
             {
                 contexto.Entry(prestamo).State = EntityState.Modified;
-                persona.Balance = prestamo.Balance;
-                contexto.Entry(persona).State = EntityState.Modified;
                 modificado = (contexto.SaveChanges() > 0);
             }
             catch(Exception)

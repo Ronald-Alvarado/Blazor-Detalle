@@ -1,6 +1,7 @@
+using Blazor_Detalle.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blazor_Detalle{
+namespace Blazor_Detalle.DAL{
 
     public class Contexto : DbContext{
 

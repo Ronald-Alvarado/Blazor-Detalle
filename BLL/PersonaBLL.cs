@@ -3,8 +3,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Blazor_Detalle.Models;
+using Blazor_Detalle.DAL;
 
-namespace Blazor_Detalle
+namespace Blazor_Detalle.BLL
 {
     public class PersonaBLL
     {
@@ -16,7 +18,7 @@ namespace Blazor_Detalle
                 return Modificar(persona);
         }
 
-        private static bool Existe(int id)
+        public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
@@ -36,7 +38,7 @@ namespace Blazor_Detalle
             return encontrado;
         }
 
-        private static bool Insertar(Persona persona)
+        public static bool Insertar(Persona persona)
         {
             Contexto contexto = new Contexto();
             bool insertado = false;
@@ -57,7 +59,7 @@ namespace Blazor_Detalle
             return insertado;
         }
 
-        private static bool Modificar(Persona persona)
+        public static bool Modificar(Persona persona)
         {
             Contexto contexto = new Contexto();
             bool modificado = false;

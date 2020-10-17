@@ -45,8 +45,8 @@ namespace Blazor_Detalle.Migrations
                 {
                     PrestamoId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    FechaCreacion = table.Column<DateTime>(nullable: false),
                     PersonaId = table.Column<int>(nullable: false),
+                    FechaCreacion = table.Column<DateTime>(nullable: false),
                     Concepto = table.Column<string>(nullable: false),
                     Monto = table.Column<float>(nullable: false),
                     Balance = table.Column<float>(nullable: false)
