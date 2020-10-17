@@ -43,6 +43,28 @@ namespace Blazor_Detalle.BLL
             return insertado;
         }
 
+        public static bool QuitarBalance(Persona persona)
+        {            
+            Contexto contexto = new Contexto();
+            bool quitar = false;
+
+            try
+            {
+                persona.Balance = 0;
+                contexto.Entry(persona).State = EntityState.Modified;               
+                quitar = (contexto.SaveChanges() > 0);
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return quitar;
+        }
+
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();

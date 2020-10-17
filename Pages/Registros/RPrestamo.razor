@@ -36,7 +36,7 @@
                         
                         @foreach (var item in ListaPersonas)
                         {
-                            <option value="@item.PersonaId">@item.PersonaId</option>
+                            <option value="@item.PersonaId">@item.Nombre</option>
                         }
                     </select>
 
@@ -114,6 +114,13 @@
 
     private void Guardar()
     {
+        if(prestamo.PrestamoId == 0){    
+            if(ExisteCliente()){
+                Toast.ShowError("Este Cliente ya tiene un prestamo");
+                return;
+            }
+        }
+
         Persona persona = PersonaBLL.Buscar(prestamo.PersonaId);
         bool guardado;
 
@@ -130,23 +137,44 @@
             Toast.ShowError("Error, no se pudo Guardar");
     }
 
+    private bool ExisteCliente(){
+        Persona persona = PersonaBLL.Buscar(prestamo.PersonaId);
+
+        if(persona.Balance > 0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
     private void Buscar()
     {
          if (prestamo.PrestamoId > 0)
-         {
-             var encontrado = PrestamoBLL.Buscar(prestamo.PrestamoId);
-             if (encontrado != null){
-                 prestamo = encontrado;
-				 Toast.ShowSuccess("Se ha Enconrado el Prestamo");
-			 }else{
-                 Toast.ShowWarning("No se pudo localizar el Prestamo indicado");
-			 }
-         }       
+         {                        
+            var encontrado = PrestamoBLL.Buscar(prestamo.PrestamoId);
+
+            if(prestamo.PersonaId == 0)
+            {
+                Toast.ShowWarning("El cliente de este prestamo ya no existe");
+                return;
+            }else{
+
+                if (encontrado != null){
+                    prestamo = encontrado;
+			    }else{
+                    Toast.ShowWarning("No se pudo localizar el Prestamo indicado");
+			    }
+            }
+        }       
     }
 
     private void Eliminar()
     {
+        Persona persona = PersonaBLL.Buscar(prestamo.PersonaId);
         bool elimino;
+
+        PrestamoBLL.QuitarBalance(persona);
 
         elimino = PrestamoBLL.Eliminar(prestamo.PrestamoId);
 
