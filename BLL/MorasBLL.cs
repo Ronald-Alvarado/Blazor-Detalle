@@ -64,6 +64,13 @@ namespace Blazor_Detalle
 
             try
             {
+                contexto.Database.ExecuteSqlRaw($"Delete FROM MorasDetalle Where MoraId = {mora.MoraId}");
+
+                foreach (var item in mora.MoraDetalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                }
+
                 contexto.Entry(mora).State = EntityState.Modified;
                 modificado = (contexto.SaveChanges() > 0);
             }
@@ -86,8 +93,12 @@ namespace Blazor_Detalle
             try
             {
                 var buscando = contexto.Moras.Find(id);
-                contexto.Entry(buscando).State = EntityState.Deleted;
-                eliminado = (contexto.SaveChanges() > 0);
+                
+                if (buscando != null)
+                {
+                    contexto.Moras.Remove(buscando);//remover la entidad
+                    eliminado = contexto.SaveChanges() > 0;
+                }
             }
             catch
             {
@@ -107,7 +118,10 @@ namespace Blazor_Detalle
             
             try
             {
-                mora = contexto.Moras.Find(id);
+                mora = contexto.Moras
+                    .Where(m => m.MoraId == id)
+                    .Include(m => m.MoraDetalle)
+                    .FirstOrDefault();
             }
             catch
             {
