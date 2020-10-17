@@ -12,68 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1613664590,
+        "HashCode": -971321347,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.App",
+        "Name": "Blazor_Detalle.Pages.FetchData",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.App"
+          "Common.TypeName": "Blazor_Detalle.Pages.FetchData"
         }
       },
       {
-        "HashCode": -1093419507,
+        "HashCode": -1154316354,
         "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.App",
+        "Name": "Blazor_Detalle.Pages.FetchData",
         "AssemblyName": "Blazor-Detalle",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Blazor_Detalle.App"
+            "TagName": "Blazor_Detalle.Pages.FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1604810439,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.Counter",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": 650694240,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.Counter",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor_Detalle.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.Counter",
+          "Common.TypeName": "Blazor_Detalle.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,39 +78,6 @@
         }
       },
       {
-        "HashCode": -971321347,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.FetchData",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": -1154316354,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Pages.FetchData",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor_Detalle.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 464858320,
         "Kind": "Components.Component",
         "Name": "Blazor_Detalle.Pages.Index",
@@ -173,6 +107,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor_Detalle.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1604810439,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Counter",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": 650694240,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Counter",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1613664590,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.App",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.App"
+        }
+      },
+      {
+        "HashCode": -1093419507,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.App",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -273,39 +273,6 @@
         }
       },
       {
-        "HashCode": 523992752,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Shared.NavMenu",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 811935902,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Shared.NavMenu",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor_Detalle.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 407729289,
         "Kind": "Components.Component",
         "Name": "Blazor_Detalle.Shared.SurveyPrompt",
@@ -355,6 +322,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor_Detalle.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 523992752,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Shared.NavMenu",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 811935902,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Shared.NavMenu",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

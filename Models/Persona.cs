@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace RegistroPrestamo.Models
+namespace Blazor_Detalle
 {
     public class Persona
     {
@@ -21,7 +21,6 @@ namespace RegistroPrestamo.Models
 
         [Required(ErrorMessage = "Debe poner una Fecha de Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
-
-        public decimal Balance { get; set; }
+        public float Balance { get; set; }
     }
 }

@@ -6,6 +6,8 @@ namespace Blazor_Detalle{
 
         public DbSet<Moras> Moras { get; set;}
         public DbSet<MorasDetalle> MorasDetalle { get; set;}
+        public DbSet<Persona> Persona { get; set;}
+        public DbSet<Prestamo> Prestamo { get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

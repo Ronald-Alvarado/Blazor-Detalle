@@ -19,8 +19,8 @@ namespace Blazor_Detalle
         public string Concepto { get; set; }
 
         [Required(ErrorMessage = "Debe poner un Monto")]
-        public decimal Monto { get; set; }        
-        public decimal Balance { get; set; }
+        public float Monto { get; set; }        
+        public float Balance { get; set; }
 
         [ForeignKey("PrestamoId")]
         public virtual List<MorasDetalle> MoraDetalle { get; set;} = new List<MorasDetalle>();
