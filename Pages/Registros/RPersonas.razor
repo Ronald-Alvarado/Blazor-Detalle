@@ -1,0 +1,136 @@
+@page "/Persona"
+
+@inject IToastService Toast
+
+<EditForm Model="persona" OnValidSubmit="Guardar">
+	<DataAnnotationsValidator/>
+    <div class="container shadow-lg p-3 rb-5 bg-white rounded col-md-8">	
+		<div class="card">
+			<div class="card-header">
+				<h3>Registro de Personas</h3>
+			</div>
+			
+			<div class="card-body">
+				<div class="form-group">
+					<label>PersonaId</label>					
+					<div class="input-group">
+						<InputNumber @bind-Value="persona.PersonaId" class="form-control"/>
+						<div class="input-group-append">
+							<button type="button" class="btn btn-primary input-group-text" @onclick="Buscar">Buscar</button>
+						</div>
+					</div>	
+				</div>
+
+				<div class="form-group">
+					<label>Nombre</label>
+					<input type="text" @bind="persona.Nombre" class="form-control"/>
+					<ValidationMessage For="@(() => persona.Nombre)"/>
+				</div>
+
+                <div class="form-group">
+					<label>Teléfono</label>
+					<input type="text" @bind="persona.Telefono" class="form-control"/>
+					<ValidationMessage For="@(() => persona.Telefono)"/>
+				</div>
+
+                <div class="form-group">
+					<label>Cédula</label>
+					<input type="text" @bind="persona.Cedula" class="form-control"/>
+					<ValidationMessage For="@(() => persona.Cedula)"/>
+				</div>
+
+				<div class="form-group">
+					<label>Dirección</label>
+					<input type="text" @bind="persona.Direccion" class="form-control"/>
+					<ValidationMessage For="@(() => persona.Direccion)"/>
+				</div>            	
+				
+                <div class="form-group">
+					<label>Fecha de Nacimiento</label>
+					<input type="Date" @bind="persona.FechaNacimiento" class="form-control"/>
+					<ValidationMessage For="@(() => persona.FechaNacimiento)"/>
+				</div>
+
+                <div class="form-group">
+					<label>Balance</label>
+					<input readonly="true" type="text" @bind="persona.Balance" class="form-control"/>
+				</div>
+				
+                	                    <!--Buttons--->
+				
+                	<div class="form-group text-center" display: inline-block>
+					<div class="btn-group mr-5" role="group" aria-label="First group">
+						<button type="button" class="btn btn-outline-secondary" @onclick="Nuevo">Nuevo</button>
+					</div>
+						<div class="btn-group mr-5" role="group" aria-label="Second group">
+						<button type="submit" class="btn btn-outline-success">Guardar</button>
+					</div>
+					
+					<div class="btn-group" role="group" aria-label="Third group">
+						<button type="button" class="btn btn-outline-danger" @onclick="Eliminar">Eliminar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</EditForm>
+
+@code{
+   private Persona persona = new Persona();
+
+    [Parameter] public int PersonaId { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Nuevo();
+    }
+
+    private void Nuevo()
+    {
+        persona = new Persona();
+    }
+
+    private void Guardar()
+    {
+        bool guardado;
+
+        guardado = PersonaBLL.Guardar(persona);
+
+        if (guardado)
+        {
+            Nuevo();
+            Toast.ShowSuccess("Se ha Guardado Exitosamente");
+        }
+        else
+            Toast.ShowError("Error, no se pudo Guardar");
+    }
+
+    private void Buscar()
+    {
+         if (persona.PersonaId > 0)
+         {
+             var encontrado = PersonaBLL.Buscar(persona.PersonaId);
+             if (encontrado != null){
+                 persona = encontrado;
+				 Toast.ShowSuccess("Se ha Enconrado la Persona");
+			 }else{
+                 Toast.ShowWarning("No se pudo localizar la Persona indicada");
+			 }
+         }       
+    }
+
+    private void Eliminar()
+    {
+        bool elimino;
+
+        elimino = PersonaBLL.Eliminar(persona.PersonaId);
+
+        if (elimino)
+        {
+            Nuevo();
+            Toast.ShowSuccess("Se ha Eliminado Exitosamente");
+        }
+        else
+            Toast.ShowError("No se pudo localizar la Persona indicada");     
+    }
+}
