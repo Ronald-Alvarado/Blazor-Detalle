@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Blazor_Detalle.Data;
+using Blazored.Toast;
 
 namespace Blazor_Detalle
 {

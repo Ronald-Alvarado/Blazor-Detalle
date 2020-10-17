@@ -73,6 +73,20 @@ using Blazor_Detalle.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\Pages\FetchData.razor"
 using Blazor_Detalle.Data;
 

@@ -89,3 +89,15 @@ C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\staticwe
 C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\Blazor-Detalle.dll
 C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\Blazor-Detalle.pdb
 C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\Blazor-Detalle.genruntimeconfig.cache
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Registros\RPersonas.razor.g.cs
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Registros\RPrestamo.razor.g.cs
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Blazor-Detalle.StaticWebAssets.xml
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Blazored.Toast.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\Razor\Pages\Registros\RPersonas.razor.g.cs
+C:\Users\RONALD\source\BlazorApp\Blazor-Detalle\obj\Debug\netcoreapp3.1\Razor\Pages\Registros\RPrestamo.razor.g.cs

@@ -60,9 +60,7 @@ namespace Blazor_Detalle
 
             try
             {
-                prestamo.Balance = prestamo.Balance + prestamo.Monto;
                 contexto.Prestamo.Add(prestamo);
-
                 persona.Balance = prestamo.Balance;
                 contexto.Persona.Add(persona);
                 insertado = (contexto.SaveChanges() > 0);
@@ -85,9 +83,7 @@ namespace Blazor_Detalle
 
             try
             {
-                prestamo.Balance = prestamo.Balance + prestamo.Monto;
                 contexto.Entry(prestamo).State = EntityState.Modified;
-
                 persona.Balance = prestamo.Balance;
                 contexto.Entry(persona).State = EntityState.Modified;
                 modificado = (contexto.SaveChanges() > 0);

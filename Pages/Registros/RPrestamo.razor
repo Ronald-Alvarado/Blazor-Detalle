@@ -23,13 +23,14 @@
 
                 <div class="form-group">
 					<label>Fecha de Creación</label>
-					<input readonly="true" type="datetime" @bind="prestamo.FechaCreacion" class="form-control"/>
+					<InputDate readonly="true" @bind-Value="prestamo.FechaCreacion" class="form-control"/>
 				</div>
 
 				<div class="form-group">
 					<label>PersonaId</label>
-					<select @bind="PersonaSeleccionada" class="form-control" @onfocusout="ObtenerBalance">
+					<select @bind="PersonaSeleccionada" class="form-control" @onfocusin="ObtenerBalance">
                         <option value="0" disabled selected>Seleccionar persona</option>
+                        
                         @foreach (var item in ListaPersonas)
                         {
                             <option value="@item.PersonaId">@item.PersonaId</option>
@@ -40,19 +41,19 @@
 
                 <div class="form-group">
 					<label>Concepto</label>
-					<input type="text" @bind="prestamo.Concepto" class="form-control"/>
+					<InputText @bind-Value="prestamo.Concepto" class="form-control"/>
                     <ValidationMessage For="@(() => prestamo.Concepto)"/>
 				</div>
 
                 <div class="form-group">
 					<label>Monto</label>
-					<input type="text" @bind="prestamo.Monto" class="form-control"/>
+					<InputNumber @bind-Value="prestamo.Monto" class="form-control" @onfocusout="CalcularMonto" />
                     <ValidationMessage For="@(() => prestamo.Monto)"/>
 				</div>
 
 				<div class="form-group">
 					<label>Balance</label>
-					<input readonly="true" type="text" @bind="prestamo.Balance" class="form-control"/>
+					<InputNumber readonly="true" @bind-Value="prestamo.Balance" class="form-control"/>
 				</div>           	
 				
                 	                    <!--Buttons--->
@@ -87,6 +88,7 @@
         Nuevo();
     }
 
+    public float Balance { get; set;}
     private void ObtenerBalance()
     {
         Persona persona = PersonaBLL.Buscar(PersonaSeleccionada);
@@ -96,6 +98,13 @@
             prestamo.PersonaId = persona.PersonaId;
             prestamo.Balance = persona.Balance;
         }
+
+        
+        Balance = prestamo.Balance;
+    }
+
+    private void CalcularMonto(){
+        prestamo.Balance = Balance + prestamo.Monto;
     }
 
     private void Nuevo()
