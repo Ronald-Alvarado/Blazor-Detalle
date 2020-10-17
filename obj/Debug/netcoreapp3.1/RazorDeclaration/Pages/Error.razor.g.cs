@@ -76,6 +76,20 @@ using Blazor_Detalle.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "c:\Users\RONALD\source\BlazorApp\Blazor-Detalle\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "c:\Users\RONALD\source\BlazorApp\Blazor-Detalle\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/error")]
     public partial class Error : Microsoft.AspNetCore.Components.ComponentBase
     {

@@ -197,6 +197,59 @@
         }
       },
       {
+        "HashCode": -560708390,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RPrestamo"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "PrestamoId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PrestamoId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo"
+        }
+      },
+      {
+        "HashCode": -1731146591,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Pages.Registros.RPrestamo",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.Pages.Registros.RPrestamo"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "PrestamoId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PrestamoId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Pages.Registros.RPrestamo",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1613664590,
         "Kind": "Components.Component",
         "Name": "Blazor_Detalle.App",
@@ -279,39 +332,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor_Detalle.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 523992752,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Shared.NavMenu",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 811935902,
-        "Kind": "Components.Component",
-        "Name": "Blazor_Detalle.Shared.NavMenu",
-        "AssemblyName": "Blazor-Detalle",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor_Detalle.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -408,6 +428,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "Blazor_Detalle.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 523992752,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Shared.NavMenu",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 811935902,
+        "Kind": "Components.Component",
+        "Name": "Blazor_Detalle.Shared.NavMenu",
+        "AssemblyName": "Blazor-Detalle",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor_Detalle.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor_Detalle.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15171,6 +15224,11 @@
     {
       "FilePath": "c:\\Users\\RONALD\\source\\BlazorApp\\Blazor-Detalle\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\RONALD\\source\\BlazorApp\\Blazor-Detalle\\Pages\\Registros\\RPrestamo.razor",
+      "TargetPath": "Pages\\Registros\\RPrestamo.razor",
       "FileKind": "component"
     },
     {
